@@ -1,10 +1,16 @@
 import javax.swing.JOptionPane;
 public class Calculadora{
     public static void main (String... args){
-        //vou começar com a soma...
+        int op = Integer.parseInt(JOptionPane.showInputDialog ("1-Soma 2-Subtracao"));
         int a = Integer.parseInt(JOptionPane.showInputDialog ( "Primeiro operando"));
         int b = Integer.parseInt (JOptionPane.showInputDialog ("Segundo operando" ));
-        int res = a + b;
-        JOptionPane.showMessageDialog (null, res);
+        int res;
+        if (op == 1){
+            res = a + b;
+        }
+        else{
+            res = a - b;
+        }
+        JOptionPane.showMessageDialog (null, "Resultado: " + res);
     }
 } 
